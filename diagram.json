@@ -1,0 +1,370 @@
+{
+  "version": 1,
+  "author": "Raghav Kadambi",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -150,
+      "left": -260,
+      "attrs": {
+        "value": "2000"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot2",
+      "top": -150,
+      "left": -170,
+      "attrs": {
+        "value": "2080"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot3",
+      "top": -150,
+      "left": -80,
+      "attrs": {
+        "value": "2160"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot4",
+      "top": -150,
+      "left": 10,
+      "attrs": {
+        "value": "2240"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potI",
+      "top": -150,
+      "left": 110,
+      "attrs": {
+        "value": "1365"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 40,
+      "left": -200,
+      "attrs": {
+        "color": "yellow",
+        "label": "BAL C1"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 60,
+      "left": -120,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 85,
+      "left": -200,
+      "attrs": {
+        "color": "yellow",
+        "label": "BAL C2"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 105,
+      "left": -120,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 130,
+      "left": -200,
+      "attrs": {
+        "color": "yellow",
+        "label": "BAL C3"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 150,
+      "left": -120,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led4",
+      "top": 175,
+      "left": -200,
+      "attrs": {
+        "color": "yellow",
+        "label": "BAL C4"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": 195,
+      "left": -120,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledAlarm",
+      "top": 40,
+      "left": 200,
+      "attrs": {
+        "color": "red",
+        "label": "IMBALANCE"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rA",
+      "top": 60,
+      "left": 150,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "sw",
+      "top": 150,
+      "left": 200,
+      "attrs": {
+        "value": "1"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "pot1:SIG",
+      "esp:34",
+      "green",
+      []
+    ],
+    [
+      "pot1:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "pot1:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "pot2:SIG",
+      "esp:35",
+      "green",
+      []
+    ],
+    [
+      "pot2:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "pot2:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "pot3:SIG",
+      "esp:32",
+      "green",
+      []
+    ],
+    [
+      "pot3:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "pot3:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "pot4:SIG",
+      "esp:33",
+      "green",
+      []
+    ],
+    [
+      "pot4:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "pot4:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "potI:SIG",
+      "esp:VP",
+      "orange",
+      []
+    ],
+    [
+      "potI:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "potI:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:25",
+      "r1:2",
+      "yellow",
+      []
+    ],
+    [
+      "r1:1",
+      "led1:A",
+      "yellow",
+      []
+    ],
+    [
+      "led1:C",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:26",
+      "r2:2",
+      "yellow",
+      []
+    ],
+    [
+      "r2:1",
+      "led2:A",
+      "yellow",
+      []
+    ],
+    [
+      "led2:C",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:27",
+      "r3:2",
+      "yellow",
+      []
+    ],
+    [
+      "r3:1",
+      "led3:A",
+      "yellow",
+      []
+    ],
+    [
+      "led3:C",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:14",
+      "r4:2",
+      "yellow",
+      []
+    ],
+    [
+      "r4:1",
+      "led4:A",
+      "yellow",
+      []
+    ],
+    [
+      "led4:C",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:2",
+      "rA:1",
+      "red",
+      []
+    ],
+    [
+      "rA:2",
+      "ledAlarm:A",
+      "red",
+      []
+    ],
+    [
+      "ledAlarm:C",
+      "esp:GND.3",
+      "black",
+      []
+    ],
+    [
+      "sw:2",
+      "esp:4",
+      "blue",
+      []
+    ],
+    [
+      "sw:1",
+      "esp:GND.3",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
